@@ -1,7 +1,7 @@
 # vue-router-h5-history
 vue-router的HTML5 History 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
 
-```language
+```js
 const router = new VueRouter({
   mode: 'history',
   routes: [...]
@@ -24,7 +24,7 @@ const router = new VueRouter({
 下面是在实际开发中碰到的问题。
 
 我们的后端服务器是nginx，所以按照官方的给出的配置，找到nginx.conf，照抄代码，修改完后重启服务器，讲道理是成功的。
-```language
+```
 server
 {
     listen 80;
@@ -53,7 +53,7 @@ server
 而真相只有一个，那就是~~~ 
 
 **路由文件中的路径有问题**
-```language
+```js
 const router = new VueRouter({
   mode: 'history',
   routes: [
